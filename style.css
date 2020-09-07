@@ -29,11 +29,70 @@ input[type="text"] {
   width: 400px;
 }
 
+#meals {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
+  padding-top: 30px;
+}
+.meal {
+  position: relative;
+  height: 180px;
+  width: 180px;
+  margin-top: 50px;
+  text-align: center;
+}
+.meal h3 {
+  text-align: center;
+}
+.image {
+  width: 100%;
+  height: 100%;
+  border: 4px white solid;
+  border-radius: 3px;
+}
+
+.info {
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(22, 22, 22, 0.863);
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  transition: opacity 0.2s ease-in;
+  opacity: 0;
+}
+
+.info:hover {
+  opacity: 1;
+}
+
 @media (max-width: 600px) {
   input[type="text"] {
     width: 200px;
   }
 }
+
+@media (max-width: 900px) {
+  #meals {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+  }
+}
+
+@media (max-width: 400px) {
+  #meals {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 20px;
+  }
+}
+
 @media (max-width: 300px) {
   input[type="text"] {
     width: 100px;
